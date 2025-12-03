@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahera's Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".slide-in");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+
+<body>
+<header class="header">
+  <div class="logo"><a href="#Home" class="logo"><img src="logo.png" alt="Logo"></a></div>
+
+  <!-- Hamburger toggle checkbox -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger-icon" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Project">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- <button class="header-button">Resume</button> -->
+</header>
+  
+  <div class="parallax" id="Home"> 
+    <h1 class="name word">
+      <span class="letter">Z</span>
+      <span class="letter">A</span>
+      <span class="letter">H</span>
+      <span class="letter">E</span>
+      <span class="letter">R</span>
+      <span class="letter">A</span>
+      <span class="letter">'</span>
+      <span class="letter">S</span>
+    </h1>
+
+    <h2 class="name word">
+      <span class="letter">p</span>
+      <span class="letter">o</span>
+      <span class="letter">r</span>
+      <span class="letter">t</span>
+      <span class="letter">f</span>
+      <span class="letter">o</span>
+      <span class="letter">l</span>
+      <span class="letter">i</span>
+      <span class="letter">o</span>
+    </h2>
+  </div>
+  <div class="about-section" id="About" >
+  <h2 class="slide-in">About Me</h2>
+  <p class="slide-in"> I am a first-year college student at NSCC. I am doing a program in IT Database Administration. My hobbies are coding, building arduino projects, reading, and running. I also love learning new languages. I currently speak 2 fluently. 
+ 
+  </p>
+
+  <button class="Vbutton" class="slide-in"><a href="Zahera_Resume.pdf" target="_blank">View My Resume</a></button>
+  
+
+</div>
+<div class="skills-section" id="Skills">
+  <h2 id="skills" class="hover-flip slide-in">My Skills</h2>
+  <div class="skills-container slide-in">
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML5" />
+      <p>HTML5</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" alt="CSS3" />
+      <p>CSS3</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JavaScript" />
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://www.citypng.com/public/uploads/preview/java-black-logo-transparent-background-7017516947718410uhqilxw3a.png" alt="Java" />
+      <p>Java</p>
+      <p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" alt="Linux" />
+      <p>Linux</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="SQL" />
+      <p>SQL</p>
+    </div>
+  </div>
+</div>
+<div class = "projects-section" id="Project">
+  <h2 class ="slide-in">Projects</h2>
+</div>
+<div class ="contact-section" id="Contact">
+    <h2 class="slide-in">Contact Me</h2>
+    <form class="contact-form slide-in" action="mailto:zaherathariq@gmail.com" method="post" enctype="text/plain">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message.." required></textarea>
+
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<footer class="footer">
+  <div class="footer-icons">
+
+    <!-- GitHub -->
+    <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:zaherathariq@gmail.com?subject=Hello%20Zahera"aria-label="Email">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email">
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/zaherathariq" target="_blank" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn">
+    </a>
+
+  </div>
+  <p class="footer-text">© 2025 Zahera — All rights reserved.</p>
+</footer>  
+</body>
+</html>
