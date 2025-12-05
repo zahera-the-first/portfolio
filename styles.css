@@ -636,3 +636,64 @@ h2 {
 .logo img:hover {
   transform: rotate(360deg);
 }
+.projects-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: inherit;
+  color: inherit;
+  text-align: center; /* centers the section title */
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center; /* centers the card horizontally */
+}
+
+/* Project card box */
+.project-card {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 350px;   /* keep it nicely sized */
+  width: 100%;
+  text-align: center; /* center text inside */
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Image under title */
+.project-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px auto 15px auto;
+  display: block;
+}
+
+/* Project links centered nicely */
+.project-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--font-desktop);
+}
+.project-links a:hover {
+  color: var(--accent-desktop);
+}
